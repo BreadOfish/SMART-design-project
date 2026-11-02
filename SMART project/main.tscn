@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://n13vl02jxdu8"]
+
+[ext_resource type="Texture2D" uid="uid://bx02svyebw1g4" path="res://assets/helper_Offical.png" id="1_ig7tw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="HelperOffical" type="Sprite2D" parent="."]
+position = Vector2(-4, -4)
+scale = Vector2(0.31439856, 0.29324895)
+texture = ExtResource("1_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
