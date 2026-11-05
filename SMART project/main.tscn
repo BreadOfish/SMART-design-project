@@ -1,12 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://n13vl02jxdu8"]
+[gd_scene format=3 uid="uid://n13vl02jxdu8"]
 
+[ext_resource type="Script" uid="uid://dgspoeepfo5i8" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bx02svyebw1g4" path="res://assets/helper_Offical.png" id="1_ig7tw"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b136p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ig7tw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
-[node name="HelperOffical" type="Sprite2D" parent="."]
-position = Vector2(-4, -4)
-scale = Vector2(0.31439856, 0.29324895)
-texture = ExtResource("1_ig7tw")
+[node name="Main" type="Node2D" unique_id=1450293155]
+script = ExtResource("1_0xm2m")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=114220739]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1866660526]
+position = Vector2(-0.99998474, -7.9999847)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_b136p")
