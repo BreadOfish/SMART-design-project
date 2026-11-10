@@ -14,7 +14,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D" unique_id=1450293155]
+[node name="Scene" type="Node2D" unique_id=1450293155]
 script = ExtResource("1_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=114220739]
@@ -23,3 +23,5 @@ script = ExtResource("1_0xm2m")
 position = Vector2(-0.99998474, -7.9999847)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_b136p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=402586786]
