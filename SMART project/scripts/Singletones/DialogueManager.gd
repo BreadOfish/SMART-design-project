@@ -24,9 +24,10 @@ func show_textbox():
 	text_box = text_box_scene.instantiate();
 	text_box.text_finish.connect(on_text_box_finish);
 	get_tree().root.add_child.call_deferred(text_box);
+	await text_box.ready;
 	text_box.global_position = text_box_pos;
 	text_box.display_text(dialog_line[line_index]);
-	
+	 	
 func on_text_box_finish(event):
 	if(event.is_action_pressed("advance_dialog") && can_advance_line && is_dialog_active):
 		text_box.queue_free();

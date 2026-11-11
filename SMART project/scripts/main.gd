@@ -1,10 +1,5 @@
 extends Node2D
-const TEST_DIALOGUE:  Array[String]  = [
-	"Hello world!",
-	"This is a test dialog box!",
-	"Lorum Ipsum",
-	"Ballsack"
-];
+
 
 @onready var sprite = $AnimatedSprite2D
 
@@ -20,9 +15,5 @@ func _ready() -> void:
 	window.transient = false;
 	
 	var screen = window.current_screen;
-	var pos = DisplayServer.screen_get_usable_rect(	screen);
+	var pos = DisplayServer.screen_get_usable_rect(screen);
 	window.position = pos.position + pos.size - window.size;
-	test();
-
-func test():
-	DialogueManager.start_dialog(sprite.global_position, TEST_DIALOGUE);

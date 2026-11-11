@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dl8cyv8qy132u"]
 
-[ext_resource type="Script" uid="uid://c8j8yvuuye14" path="res://scenes/textbox.gd" id="1_3xmdk"]
+[ext_resource type="Script" uid="uid://c8j8yvuuye14" path="res://scripts/textbox.gd" id="1_3xmdk"]
 [ext_resource type="Texture2D" uid="uid://brwyg6xqexw1k" path="res://assets/text_bubble.png" id="2_g5d5p"]
 
 [node name="Textbox" type="MarginContainer" unique_id=50205440]
@@ -24,12 +24,12 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
+[node name="Timer" type="Timer" parent="MarginContainer" unique_id=2017138491]
+one_shot = true
+
 [node name="Label" type="Label" parent="MarginContainer" unique_id=809774499]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="." unique_id=2017138491]
-one_shot = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="MarginContainer/Timer" to="." method="_on_timer_timeout"]
