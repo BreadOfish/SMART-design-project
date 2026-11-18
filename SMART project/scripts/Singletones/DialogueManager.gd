@@ -30,6 +30,7 @@ func show_textbox():
 	 	
 func on_text_box_finish(event):
 	if(event.is_action_pressed("advance_dialog") && can_advance_line && is_dialog_active):
+		print("Pressed space");
 		text_box.queue_free();
 		line_index += 1;
 		if (line_index >= dialog_line.size()):

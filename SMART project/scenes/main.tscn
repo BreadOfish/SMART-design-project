@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dgspoeepfo5i8" path="res://scripts/main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bx02svyebw1g4" path="res://assets/helper_Offical.png" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dl8cyv8qy132u" path="res://scenes/textbox.tscn" id="2_jyhfs"]
-[ext_resource type="Script" uid="uid://ljcusmw2uvj3" path="res://scenes/animated_sprite_2d.gd" id="3_sugp2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b136p"]
 animations = [{
@@ -16,10 +14,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_0wfyh"]
+script/source = "extends AnimatedSprite2D
+
+const TEST_DIALOGUE:  Array[String]  = [
+	\"Hello world!\",
+	\"This is a test dialog box!\",
+	\"Lorum Ipsum\"
+	];
+
+func _ready():
+	DialogueManager.start_dialog(global_position, TEST_DIALOGUE);
+"
+
 [node name="Scene" type="Node2D" unique_id=1450293155]
 script = ExtResource("1_0xm2m")
-
-[node name="Textbox" parent="." unique_id=50205440 instance=ExtResource("2_jyhfs")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=114220739]
 
@@ -27,6 +36,8 @@ script = ExtResource("1_0xm2m")
 position = Vector2(-0.99998474, -7.9999847)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_b136p")
-script = ExtResource("3_sugp2")
+script = SubResource("GDScript_0wfyh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=402586786]
+
+[node name="WanderTimer" type="Timer" parent="." unique_id=1997660880]

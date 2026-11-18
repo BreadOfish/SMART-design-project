@@ -36,6 +36,5 @@ func display_letter():
 		return;
 	timer.start(letter_time);
 
-
 func _on_timer_timeout() -> void:
 	display_letter();
