@@ -7,7 +7,7 @@ enum modes {
 	WANDER
 }
 
-var mode = modes.WANDER;
+var mode = modes.DEFAULT;
 var prevNode = mode;
 signal modeSwitch;
 

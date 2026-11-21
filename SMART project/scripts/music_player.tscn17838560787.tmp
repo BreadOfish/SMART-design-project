@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cq8g7air86ayg"]
+
+[ext_resource type="Script" uid="uid://doiapfuoqs4c8" path="res://music_player.gd" id="1_o4yhc"]
+[ext_resource type="Texture2D" uid="uid://bx02svyebw1g4" path="res://assets/helper_Offical.png" id="2_qitqb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8nf8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qitqb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_wcudy"]
+script/source = "extends AnimatedSprite2D
+
+const TEST_DIALOGUE:  Array[String]  = [
+	\"Hello world!\",
+	\"This is a test dialog box!\",
+	\"Lorum Ipsum\"
+	];
+"
+
+[node name="music_player" type="Node2D" unique_id=1401060453]
+script = ExtResource("1_o4yhc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1309336955]
+position = Vector2(-1.0000005, -1.5258789e-05)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_8nf8j")
+script = SubResource("GDScript_wcudy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=969482606]

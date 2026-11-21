@@ -33,8 +33,6 @@ func _process(delta) -> void:
 func _wanderMode() -> void:
 	#If wanderTo is null or we went to the position, generate a new wander point
 	if(wanderTo == null || window.position == wanderTo):
-		wander_timer.start(randi_range(1, 5));
 		wanderTo = Vector2i(randi_range(0, screenLim.x), randi_range(0, screenLim.y));
-	if(wander_timer.is_stopped()):
-		window.position.x += sign(wanderTo.x - window.position.x);
-		window.position.y += sign(wanderTo.y - window.position.y);
+	window.position.x += sign(wanderTo.x - window.position.x);
+	window.position.y += sign(wanderTo.y - window.position.y);

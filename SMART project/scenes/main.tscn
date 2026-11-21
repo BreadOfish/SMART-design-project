@@ -22,9 +22,6 @@ const TEST_DIALOGUE:  Array[String]  = [
 	\"This is a test dialog box!\",
 	\"Lorum Ipsum\"
 	];
-
-func _ready():
-	DialogueManager.start_dialog(global_position, TEST_DIALOGUE);
 "
 
 [node name="Scene" type="Node2D" unique_id=1450293155]
@@ -37,7 +34,5 @@ position = Vector2(-0.99998474, -7.9999847)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_b136p")
 script = SubResource("GDScript_0wfyh")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=402586786]
 
 [node name="WanderTimer" type="Timer" parent="." unique_id=1997660880]

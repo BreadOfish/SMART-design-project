@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cffx3m32gm2np"]
+
+[ext_resource type="Script" uid="uid://blwryl2jlut8v" path="res://timer.gd" id="1_nucus"]
+[ext_resource type="Texture2D" uid="uid://xdrx710c67fk" path="res://assets/lebron_james.png" id="2_dmecb"]
+[ext_resource type="Script" uid="uid://yk1k086bdvnq" path="res://scripts/growing_flowers.gd" id="3_dmecb"]
+[ext_resource type="Texture2D" uid="uid://hc2ygc5l0kru" path="res://assets/timer_base.png" id="3_oj7p4"]
+
+[node name="Timer" type="Node2D" unique_id=2134022533]
+script = ExtResource("1_nucus")
+
+[node name="GrowingFlowers" type="Sprite2D" parent="." unique_id=742742881]
+position = Vector2(300, 300)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dmecb")
+script = ExtResource("3_dmecb")
+
+[node name="Base" type="Sprite2D" parent="." unique_id=465439213]
+position = Vector2(300, 300)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_oj7p4")
